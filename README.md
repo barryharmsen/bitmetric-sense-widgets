@@ -1,2 +1,2 @@
 # bitmetric-sense-widgets
-Bitmetric Qlik Sense Widgets
+Some random widgets for Qlik Sense, just a few little experiments.
