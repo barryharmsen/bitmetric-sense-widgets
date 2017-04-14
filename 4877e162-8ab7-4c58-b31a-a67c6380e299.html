@@ -1,0 +1,87 @@
+<style>@kpiTitleBgColor : {{layout.qHyperCube.qMeasureInfo[0].baseColor.color}};
+@kpiTitleFontWeight: {{settings.kpiTitleBold ? "Bold" : "Normal"}};
+@kpiTextColor : {{settings.kpiTextColor}};
+@arrowUpColor: {{settings.arrowUpColor}};
+@arrowDownColor: {{settings.arrowDownColor}};
+@compareTextColor : {{settings.compareTextColor}};
+
+.bm-kpi-tile {
+	width: 100% - 2px;
+	height: 100% - 2px;
+	max-width: 600px;
+	max-height: 300px;
+	border: 1px solid #eee;
+	
+	.bm-kpi-container {
+
+		margin: 10px;
+		text-align: center;
+		height: 100% - 20px;
+		display: flex;
+		flex-direction: column;
+		
+		.bm-kpi-title {
+			height: 50px;
+			line-height: 50px;
+			font-size: 1.2rem;
+			font-weight: @kpiTitleFontWeight;
+			color: #fff;
+			background-color: @kpiTitleBgColor;
+		}
+		
+		.bm-kpi-value {
+			color: @kpiTextColor;
+			height: 100%;
+			max-height: 6rem;
+			font-size: 2.5rem;
+			font-weight: bold;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			.bm-kpi-value-arrow {
+
+				padding-right: 10px;
+				
+				span {
+					font-size: 2rem;
+				}
+				
+				.bm-kpi-arrow-up {
+				  		color: @arrowUpColor;
+				 }
+				  
+				 .bm-kpi-arrow-down {
+				  		color: @arrowDownColor;
+				}
+				
+			}
+		
+		}
+		
+		.bm-kpi-compare {
+			span {
+				font-size: 0.8rem;
+				color: @compareTextColor;
+				text-align: center;
+			}
+		}
+	
+	}
+
+}</style>
+<div><div class="bm-kpi-tile">
+	<div class="bm-kpi-container">
+		<div class="bm-kpi-title">{{settings.kpiTitleText ? settings.kpiTitleText : data.headers[0].qFallbackTitle}}</div>
+		<div class="bm-kpi-value">
+			<div class="bm-kpi-value-arrow">
+				<span class="lui-icon lui-icon--triangle-top bm-kpi-arrow-up" ng-if="data.rows[0].cells[0].qNum > data.rows[0].cells[1].qNum"></span>
+				<span class="lui-icon lui-icon--triangle-bottom bm-kpi-arrow-down" ng-if="data.rows[0].cells[0].qNum < data.rows[0].cells[1].qNum"></span>
+			</div>
+			<div class="bm-kpi-value-text">{{data.rows[0].cells[0].qText ? data.rows[0].cells[0].qText : "Select KPI"}}</div>
+		</div>
+		<div class="bm-kpi-compare" ng-if="settings.compareShow">
+			<span>{{settings.compareLabel ? settings.compareLabel : data.headers[1].qFallbackTitle}}: {{data.rows[0].cells[1].qText}}</span>
+		</div>
+	</div>
+</div></div>

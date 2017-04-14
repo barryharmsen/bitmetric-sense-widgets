@@ -1,0 +1,9 @@
+{
+  "name": "bitmetric-sense-widgets",
+  "description": "Bitmetric Widgets",
+  "type": "widget-library",
+  "widgets": [
+    "552a947b-2c25-43f9-bae9-35d611eb2733",
+    "4877e162-8ab7-4c58-b31a-a67c6380e299"
+  ]
+}

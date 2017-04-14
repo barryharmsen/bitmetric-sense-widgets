@@ -1,0 +1,104 @@
+<style>@kpiBackgroundColor: {{settings.useMeasureColor ? layout.qHyperCube.qMeasureInfo[0].baseColor.color : settings.backgroundColor}};
+@kpiTextColor : {{settings.kpiTextColor}};
+@kpiBorderRadius : {{ settings.roundedCorners ? '15px' : '0px'}};
+@labelColor: {{settings.labelColor}};
+@labelOpacity: {{settings.opacity}};
+@arrowUpColor: {{settings.arrowUpColor}};
+@arrowDownColor: {{settings.arrowDownColor}};
+@kpiCompareTextColor : {{settings.kpiCompareTextColor}};
+@baseSize: 16px;
+
+.bm-kpi {
+	width: 100%;
+	height: 100%;
+	max-width: 600px;
+	max-height: 180px;
+	font-size: @baseSize;
+	overflow: hidden;
+	border-radius: @kpiBorderRadius;
+	background-color: @kpiBackgroundColor;
+	align-items: center;
+	
+	display: flex;
+	
+	
+	.bm-kpi-container {
+		padding: 20px;
+		text-align: right;
+		
+		.bm-kpi-title {
+			
+			font-size: 1.2rem;
+			color: @labelColor;
+			opacity: @labelOpacity;
+			text-transform: uppercase;
+		}
+		
+		.bm-kpi-value {
+			display: flex;
+			
+			.bm-kpi-value-text {
+			
+				font-size: 2.5rem;
+				font-weight: bold;
+				color: @kpiTextColor;
+				flex: 1 1;
+			}
+
+			.bm-kpi-arrow {
+			  	span {
+				  
+				  font-size: 3rem;
+				  padding-left: 20px;				  
+
+			  	}
+				
+			 	.bm-kpi-arrow-up {
+				  	color: @arrowUpColor;
+				 }
+				  
+				 .bm-kpi-arrow-down {
+				  	color: @arrowDownColor;
+				 }
+
+		  	}
+		}
+		
+		.bm-kpi-compare {
+		
+			padding-top: 10px;
+		
+			.bm-kpi-compare-title {
+				font-size: 0.8rem;
+				color: @kpiCompareTextColor;
+			}
+		
+			.bm-kpi-compare-value {
+				font-size: 0.8rem;
+				color: @kpiCompareTextColor;
+			}
+		
+		}
+	
+		
+	}
+	
+}</style>
+<div><div class="bm-kpi">
+	<div class="bm-kpi-container">
+		<div class="bm-kpi-title">{{data.headers[0].qFallbackTitle}}</div>
+		<div class="bm-kpi-value">
+			<div class="bm-kpi-value-text">{{data.rows[0].cells[0].qText}}</div>
+			<div class="bm-kpi-arrow">
+				<span class="lui-icon lui-icon--triangle-top bm-kpi-arrow-up" ng-if="data.rows[0].cells[0].qNum > data.rows[0].cells[1].qNum"></span>
+				<span class="lui-icon lui-icon--triangle-bottom bm-kpi-arrow-down" ng-if="data.rows[0].cells[0].qNum < data.rows[0].cells[1].qNum"></span>
+			</div>
+		</div>
+		<div class="bm-kpi-compare">
+			<div class="bm-kpi-compare-title">{{data.headers[1].qFallbackTitle}}</div>
+			<div class="bm-kpi-compare-value">{{data.rows[0].cells[1].qText}}</div>
+		</div>
+	</div>	
+</div>
+
+</div>

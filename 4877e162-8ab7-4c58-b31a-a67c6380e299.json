@@ -1,0 +1,103 @@
+{
+  "name": "KPI tile (colored bar)",
+  "description": "",
+  "author": "Barry Harmsen",
+  "library": "bitmetric-sense-widgets",
+  "meta": {
+    "type": "kpi"
+  },
+  "properties": {
+    "measures": {
+      "min": 1,
+      "max": 2
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone1-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "kpiTitleText",
+        "label": "KPI title text"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#ff0000",
+        "order": 4,
+        "parent": "header1",
+        "ref": "arrowDownColor",
+        "label": "Arrow down color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#595959",
+        "order": 2,
+        "parent": "header1",
+        "ref": "kpiTextColor",
+        "label": "KPI text color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#595959",
+        "order": 6,
+        "parent": "header1",
+        "ref": "compareTextColor",
+        "label": "Compare text color"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": false,
+        "order": 1,
+        "parent": "header1",
+        "ref": "kpiTitleBold",
+        "label": "KPI title bold"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 7,
+        "parent": "header1",
+        "ref": "compareShow",
+        "label": "Show comparative value"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#00ff00",
+        "order": 3,
+        "parent": "header1",
+        "ref": "arrowUpColor",
+        "label": "Arrow up color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 5,
+        "parent": "header1",
+        "ref": "compareLabel",
+        "label": "Compare text label"
+      }
+    ],
+    "dimensions": {
+      "max": 0,
+      "min": 0
+    }
+  },
+  "dependencies": {}
+}

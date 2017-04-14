@@ -1,0 +1,132 @@
+{
+  "name": "KPI (vergelijking)",
+  "description": "",
+  "author": "",
+  "library": "bitmetric-sense-widgets",
+  "meta": {
+    "type": "kpi"
+  },
+  "properties": {
+    "measures": {
+      "min": 1,
+      "max": 2
+    },
+    "dimensions": {
+      "max": 0,
+      "min": 0
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone1-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "0.8",
+        "order": 4,
+        "parent": "header1",
+        "ref": "opacity",
+        "label": "Label opacity"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#33cc33",
+        "order": 6,
+        "parent": "header1",
+        "ref": "arrowUpColor",
+        "label": "Arrow up color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#ff3300",
+        "order": 7,
+        "parent": "header1",
+        "ref": "arrowDownColor",
+        "label": "Arrow down color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#ffffff",
+        "order": 3,
+        "parent": "header1",
+        "ref": "labelColor",
+        "label": "Label color"
+      },
+      {
+        "component": "switch",
+        "type": "boolean",
+        "defaultValue": true,
+        "options": [
+          {
+            "value": true,
+            "label": "True"
+          },
+          {
+            "value": false,
+            "label": "False"
+          }
+        ],
+        "order": 0,
+        "parent": "header1",
+        "ref": "useMeasureColor",
+        "label": "Use measure color as background"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#efefef",
+        "order": 1,
+        "parent": "header1",
+        "ref": "backgroundColor",
+        "label": "Background color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#ffffff",
+        "order": 5,
+        "parent": "header1",
+        "ref": "kpiTextColor",
+        "label": "KPI text color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#ffffff",
+        "order": 8,
+        "parent": "header1",
+        "ref": "kpiCompareTextColor",
+        "label": "Compare KPI text color"
+      },
+      {
+        "component": "switch",
+        "type": "boolean",
+        "defaultValue": true,
+        "options": [
+          {
+            "value": true,
+            "label": "True"
+          },
+          {
+            "value": false,
+            "label": "False"
+          }
+        ],
+        "order": 2,
+        "parent": "header1",
+        "ref": "roundedCorners",
+        "label": "Rounded corners"
+      }
+    ]
+  },
+  "dependencies": {}
+}
