@@ -1,7 +1,7 @@
 {
-  "name": "KPI (vergelijking)",
+  "name": "KPI (comparison)",
   "description": "",
-  "author": "",
+  "author": "Barry Harmsen / Bitmetric",
   "library": "bitmetric-sense-widgets",
   "meta": {
     "type": "kpi"

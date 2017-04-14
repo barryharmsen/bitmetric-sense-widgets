@@ -25,7 +25,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 0,
+        "order": 1,
         "parent": "header1",
         "ref": "kpiTitleText",
         "label": "KPI title text"
@@ -34,7 +34,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "#ff0000",
-        "order": 4,
+        "order": 6,
         "parent": "header1",
         "ref": "arrowDownColor",
         "label": "Arrow down color"
@@ -43,7 +43,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "#595959",
-        "order": 2,
+        "order": 4,
         "parent": "header1",
         "ref": "kpiTextColor",
         "label": "KPI text color"
@@ -52,7 +52,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "#595959",
-        "order": 6,
+        "order": 8,
         "parent": "header1",
         "ref": "compareTextColor",
         "label": "Compare text color"
@@ -61,16 +61,16 @@
         "type": "boolean",
         "expression": "optional",
         "defaultValue": false,
-        "order": 1,
+        "order": 3,
         "parent": "header1",
         "ref": "kpiTitleBold",
-        "label": "KPI title bold"
+        "label": "KPI title text bold"
       },
       {
         "type": "boolean",
         "expression": "optional",
         "defaultValue": true,
-        "order": 7,
+        "order": 9,
         "parent": "header1",
         "ref": "compareShow",
         "label": "Show comparative value"
@@ -79,7 +79,7 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "#00ff00",
-        "order": 3,
+        "order": 5,
         "parent": "header1",
         "ref": "arrowUpColor",
         "label": "Arrow up color"
@@ -88,10 +88,28 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "",
-        "order": 5,
+        "order": 7,
         "parent": "header1",
         "ref": "compareLabel",
         "label": "Compare text label"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#ffffff",
+        "order": 2,
+        "parent": "header1",
+        "ref": "kpiTitleTextColor",
+        "label": "KPI title text color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "kpiTitleBackgroundColor",
+        "label": "KPI title background color"
       }
     ],
     "dimensions": {

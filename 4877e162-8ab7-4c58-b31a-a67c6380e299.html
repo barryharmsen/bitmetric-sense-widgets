@@ -1,5 +1,6 @@
-<style>@kpiTitleBgColor : {{layout.qHyperCube.qMeasureInfo[0].baseColor.color}};
+<style>@kpiTitleBgColor : {{settings.kpiTitleBackgroundColor ? settings.kpiTitleBackgroundColor : layout.qHyperCube.qMeasureInfo[0].baseColor.color}};
 @kpiTitleFontWeight: {{settings.kpiTitleBold ? "Bold" : "Normal"}};
+@kpiTitleTextColor: {{settings.kpiTitleTextColor}};
 @kpiTextColor : {{settings.kpiTextColor}};
 @arrowUpColor: {{settings.arrowUpColor}};
 @arrowDownColor: {{settings.arrowDownColor}};
@@ -25,7 +26,7 @@
 			line-height: 50px;
 			font-size: 1.2rem;
 			font-weight: @kpiTitleFontWeight;
-			color: #fff;
+			color: @kpiTitleTextColor;
 			background-color: @kpiTitleBgColor;
 		}
 		
@@ -53,10 +54,8 @@
 				  
 				 .bm-kpi-arrow-down {
 				  		color: @arrowDownColor;
-				}
-				
+				}		
 			}
-		
 		}
 		
 		.bm-kpi-compare {
@@ -66,9 +65,7 @@
 				text-align: center;
 			}
 		}
-	
 	}
-
 }</style>
 <div><div class="bm-kpi-tile">
 	<div class="bm-kpi-container">
